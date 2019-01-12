@@ -24,11 +24,12 @@
                  tokenize strings, including its ability to raise the necessary
                  exceptions
      - documentation (folder with pdf files):
-         - Problem Statement.pdf: the PDF the company looking to hire me supplied me with, 		which includes the problem statement
+         - Problem Statement.pdf: the PDF the company looking to hire me supplied me with, 
+         which includes the problem statement
          - to_git_or_not.pdf: the PDF where I explain how I have decided to use 
                  git and why
 
-2) Installation of the package:
+2) Package Installation:
     To install the package, please run 
     >> python setup.py build
     from the root directory */tokenizer_api
@@ -40,7 +41,7 @@
     You can now import custom_tokenizer (for an example, see usage_example.py)
     
 
-3) Test suite:
+3) Test Suite:
     The tests has been developed using pytest. 
     To run the tests, simply execute
     >> python setup.py test
