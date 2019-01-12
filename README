@@ -1,0 +1,51 @@
+
+1) Files included in this package:
+- tokenizer_api (root folder):
+     - README: this file
+     - setup.py: script to build a python package with setuptools, including
+             a description of the package's contents, metadata and dependencies
+     - setup.cfg: configuration options for setup.py
+     - MANIFEST.in: more details on the configuration of setup.py; it is meant 
+             to allow non-'.py' files to be installed as well.
+     - pytest.ini: setting some of the parameters for pytest's configuration
+     - usage_example.py: code to ilustrate how to lauch the RESTful API
+     - .gitignore: lists the files that should not be uploaded to git
+     - core (the folder with the package's code):
+         - __init__.py: empty file to mark where the package's code is to be found
+         - tokenizer.py: code to build and launch the RESTful API,
+                 as well as to tokenize the strings passed as input
+         - collocations_dict.pickle: python dictionary containing 
+                 the Oxford Online Collocations Dictionary
+     - test (folder with code to test the package):
+         - api_test.py: code to test the accessibility and error handling
+                 of the RESTful API's POST method
+         - conftest.py: code to generate a pytest.fixture for api_test.py
+         - process_text_test.py: code to test the function designed to
+                 tokenize strings, including its ability to raise the necessary
+                 exceptions
+     - documentation (folder with pdf files):
+         - Problem Statement.pdf: the PDF the company looking to hire me supplied me with, 		which includes the problem statement
+         - to_git_or_not.pdf: the PDF where I explain how I have decided to use 
+                 git and why
+
+2) Installation of the package:
+    To install the package, please run 
+    >> python setup.py build
+    from the root directory */tokenizer_api
+    
+    Once that is done, you should run
+    >> python -m pip install .
+    which will install the package in your active python environment
+    
+    You can now import custom_tokenizer (for an example, see usage_example.py)
+    
+
+3) Test suite:
+    The tests has been developed using pytest. 
+    To run the tests, simply execute
+    >> python setup.py test
+    from the root directory */tokenizer_api
+    
+    Don't be surprised to find out there are two tests the system is failing.
+    This is part of its expected behaviour. 
+    
